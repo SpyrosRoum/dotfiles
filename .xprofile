@@ -1,0 +1,23 @@
+#!/bin/sh
+
+export OWLDICT_TOKEN=8cadfc345b1033c94f6fef04ae997a9f23f9807f
+keychain ~/.ssh/id_rsa
+[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
+[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
+
+# Set a random spotify theme
+/bin/python ~/.local/bin/rand_spotify_theme
+
+dex -a ~/.config/autostart/org.corectrl.corectrl.desktop &
+light-locker &
+dunst &
+lxpolkit &
+thunar --daemon & 
+setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle' &
+picom -e 1 --config /home/spyros/.config/picom/picom.conf --experimental-backend &
+sxhkd &
+nitrogen --restore &
+clipmenud &
+dwmblocks &
+
+# /usr/bin/gnome-todo &
