@@ -8,7 +8,6 @@ keychain ~/.ssh/id_rsa
 # Set a random spotify theme
 /bin/python ~/.local/bin/rand_spotify_theme
 
-dex -a ~/.config/autostart/org.corectrl.corectrl.desktop &
 light-locker &
 dunst &
 lxpolkit &
@@ -20,4 +19,3 @@ nitrogen --restore &
 clipmenud &
 dwmblocks &
 
-# /usr/bin/gnome-todo &

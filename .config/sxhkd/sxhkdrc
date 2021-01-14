@@ -1,0 +1,55 @@
+# Terminal emulator
+super + Return
+    alacritty
+
+# Program launcher
+super + s
+    rofi -show-icons -icon-theme "Papirus" -show drun -font "Fira Code 12"
+
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
+
+super + {_,shift + } w
+    firefox {_,--private-window}
+
+super + d
+    discord-canary
+
+super + m
+    spotify
+
+super + g
+    steam
+
+super + v
+    clipmenu
+
+super + semicolon 
+    sh /home/spyros/.local/bin/dmenuunicode
+
+# Raise/Lower volume
+XF86Audio{Raise,Lower}Volume
+    amixer sset Master 5%{+,-} unmute; pkill -RTMIN+10 dwmblocks
+
+XF86AudioMute
+    amixer sset Master toggle; pkill -RTMIN+10 dwmblocks
+
+XF86AudioPlay
+    playerctl --all-players play-pause; pkill -RTMIN+11 dwmblocks
+
+XF86Audio{Next,Prev}
+    playerctl --all-players {next,previous}; pkill -RTMIN+11 dwmblocks
+
+
+# Lock screen
+alt + l
+    light-locker-command -l
+
+# Screenshot
+Print
+    flameshot gui
+
+control + Print
+    flameshot full -c -p /home/spyros/Pictures/Screenshots
+
