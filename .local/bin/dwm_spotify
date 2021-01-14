@@ -1,0 +1,26 @@
+#!/bin/sh
+
+
+dwm_spotify () {
+    if ps -C spotify > /dev/null; then
+
+        ARTIST=$(playerctl -p spotify metadata artist)
+        TRACK=$(playerctl -p spotify metadata title)
+        STATUS=$(playerctl -p spotify status)
+
+        if [ "$STATUS" = "Playing" ]; then
+            STATUS="▶"
+        else
+            STATUS="⏸"
+        fi
+       
+        echo "$STATUS $ARTIST - $TRACK"
+    fi
+}
+
+if [ "$(dwm_spotify)" = "No player could handle this command" ] ;then 
+    killall spotify
+    dwm_spotify
+else
+    dwm_spotify
+fi

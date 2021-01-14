@@ -1,0 +1,8 @@
+#!/bin/sh
+
+dwm_date () {
+    echo "📆"
+    date "+%a, %b %d %Y, %H:%M%p"
+}
+
+dwm_date
