@@ -30,10 +30,10 @@ super + semicolon
 
 # Raise/Lower volume
 XF86Audio{Raise,Lower}Volume
-    amixer sset Master 5%{+,-} unmute; pkill -RTMIN+10 dwmblocks
+    pulsemixer --change-volume -5 --unmute; pkill -RTMIN+10 dwmblocks
 
 XF86AudioMute
-    amixer sset Master toggle; pkill -RTMIN+10 dwmblocks
+    pulsemixer --toggle-mute; pkill -RTMIN+10 dwmblocks
 
 XF86AudioPlay
     playerctl --all-players play-pause; pkill -RTMIN+11 dwmblocks
