@@ -106,6 +106,7 @@ alias find="fd"
 
 alias mv="mv -i"
 alias rm="rm -i"
+alias cal="cal -m"
 
 alias clock="tty-clock -scD"
 alias paru="paru --bottomup" # So it shows official repos first
