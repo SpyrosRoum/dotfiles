@@ -1,12 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 
+export UNIWA_IP=83.212.76.143
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/spyros/.config/oh-my-zsh"
 export PATH=~/go/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=~/.poetry/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
+export PATH=~/.emacs.d/bin:$PATH
 
 export HISTFILE=~/.config/zhistory
 
@@ -107,6 +110,8 @@ alias find="fd"
 alias mv="mv -i"
 alias rm="rm -i"
 alias cal="cal -m"
+alias emacs="emacsclient -c"
+alias tb="nc termbin.com 9999"
 
 alias clock="tty-clock -scD"
 alias paru="paru --bottomup" # So it shows official repos first
@@ -114,6 +119,7 @@ alias paru="paru --bottomup" # So it shows official repos first
 alias tracert="traceroute"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias comic_dl="docker run -it --rm -v $(pwd):/directory -w /directory comic-dl:py3.6.5-stretch comic_dl -dd /directory"
 
 # Disable terminal hang when pressing ctrl+s
 stty -ixon
@@ -121,7 +127,7 @@ stty -ixon
 eval `ssh-agent` > /dev/null
 
 # Disable dotnet telemetry
-DOTNET_CLI_TELEMETRY_OPTOUT=1
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 
 ### ARCHIVE EXTRACTION 
