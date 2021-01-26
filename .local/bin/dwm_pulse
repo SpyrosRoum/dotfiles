@@ -4,7 +4,7 @@ dwm_pulse () {
     muted=$(pulsemixer --get-mute)
     vol="$(pulsemixer --get-volume | grep -o "^[0-9]*")"
 
-    if [ muted -eq 1 ] || [ "$vol" -eq 0 ]; then
+    if [ $muted -eq 1 ] || [ "$vol" -eq 0 ]; then
         echo "🔇 $vol%"
     elif [ "$vol" -gt 0 ] && [ "$vol" -le 33 ]; then
         echo "🔈 $vol%"
