@@ -96,7 +96,7 @@ export ARCHFLAGS="-arch x86_64"
 #
 alias q="exit"
 
-alias ovh="ssh 51.75.73.134 -p 88 -l spyros" 
+alias ovh="ssh spyros@51.75.73.134" 
 alias mule="ssh root@192.168.2.43"
 alias uniwa="ssh 83.212.76.143 -l ice19390205"
 alias sl="sl -Fca; clear; pwd; ls"
@@ -119,9 +119,10 @@ alias paru="paru --bottomup" # So it shows official repos first
 alias tracert="traceroute"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
-alias comic_dl="docker run -it --rm -v $(pwd):/directory -w /directory comic-dl:py3.6.5-stretch comic_dl -dd /directory"
 
+alias comic_dl="docker run -it --rm -v /home/spyros/Documents/Comics/:/directory -w /directory comic-dl comic_dl -dd /directory"
 # Disable terminal hang when pressing ctrl+s
+
 stty -ixon
 
 eval `ssh-agent` > /dev/null
@@ -157,3 +158,4 @@ ex () {
 }
 
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
