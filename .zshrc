@@ -2,6 +2,7 @@ export UNIWA_IP=83.212.76.143
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/spyros/.config/oh-my-zsh"
+export PATH="/home/spyros/build/spicetify-cli/:$PATH"
 export PATH=~/.local/bin:$PATH
 export PATH=~/.poetry/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
