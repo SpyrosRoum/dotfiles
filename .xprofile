@@ -6,7 +6,7 @@ keychain ~/.ssh/id_rsa
 [ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 
 # Set a random spotify theme
-/bin/python ~/.local/bin/rand_spotify_theme
+/usr/bin/python ~/.local/bin/rand_spotify_theme
 
 light-locker &
 dunst &
