@@ -67,7 +67,6 @@ format = "[$user]($style) in "
 style_user = "bold green"
 
 [hostname]
-hostname = ""
 ssh_only = true
 
 [cmd_duration]
@@ -87,7 +86,7 @@ symbol = " "
 read_only = " "
 style = "bold blue"
 
-[docker]
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -101,9 +100,6 @@ symbol = " "
 
 [golang]
 symbol = " "
-
-[haskell]
-symbol = " "
 
 [hg_branch]
 symbol = " "
