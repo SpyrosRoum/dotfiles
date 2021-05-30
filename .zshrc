@@ -64,7 +64,7 @@ export UPDATE_ZSH_DAYS=5
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git poetry zsh-autosuggestions)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,7 +100,7 @@ alias sl="sl -Fca; clear; pwd; ls"
 alias ls="exa --color=always --group-directories-first"
 alias cat="bat -p"
 alias grep="rg"
-alias ps="procs"
+# alias ps="procs"
 alias find="fd"
 
 alias mv="mv -i"
@@ -110,13 +110,11 @@ alias cal="cal -m"
 alias clock="tty-clock -scD"
 alias paru="paru --bottomup" # So it shows official repos first
 
-alias tracert="traceroute"
-
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
-alias comic_dl="docker run -it --rm -v /home/spyros/Documents/Comics/:/directory -w /directory comic-dl comic_dl -dd /directory"
-# Disable terminal hang when pressing ctrl+s
+alias ssh="TERM=xterm-color ssh"
 
+# Disable terminal hang when pressing ctrl+s
 stty -ixon
 
 eval `ssh-agent` > /dev/null
@@ -153,3 +151,7 @@ ex () {
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+#
+# Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2> /dev/null
+
